@@ -1,0 +1,49 @@
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 50px;
+  background-color: black;
+  inset: 0;
+  z-index: 100;
+  animation: disappear 3s linear forwards;
+  animation-delay: 2s;
+}
+.loading {
+  display: flex;
+  align-items: center;
+}
+.loading_spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.loading_logo {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 60px;
+  text-shadow: 1px 1px 60px $newtagcolor;
+  background: $bgbutton;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide 4s forwards;
+}
+@keyframes slide {
+  from {
+    bottom: (500%);
+  }
+  to {
+    top: (0%);
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
